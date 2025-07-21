@@ -39,7 +39,6 @@
             this.txtResDesc = new System.Windows.Forms.TextBox();
             this.nudResPrec = new System.Windows.Forms.NumericUpDown();
             this.nudResExis = new System.Windows.Forms.NumericUpDown();
-            this.lblResEst = new System.Windows.Forms.Label();
             this.btnActualizar = new System.Windows.Forms.Button();
             this.cmbResEst = new System.Windows.Forms.ComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.nudResPrec)).BeginInit();
@@ -67,7 +66,7 @@
             // lblDesc
             // 
             this.lblDesc.AutoSize = true;
-            this.lblDesc.Location = new System.Drawing.Point(63, 135);
+            this.lblDesc.Location = new System.Drawing.Point(65, 135);
             this.lblDesc.Name = "lblDesc";
             this.lblDesc.Size = new System.Drawing.Size(61, 13);
             this.lblDesc.TabIndex = 2;
@@ -127,6 +126,7 @@
             // 
             // nudResPrec
             // 
+            this.nudResPrec.DecimalPlaces = 2;
             this.nudResPrec.Location = new System.Drawing.Point(207, 174);
             this.nudResPrec.Maximum = new decimal(new int[] {
             1000000,
@@ -136,27 +136,25 @@
             this.nudResPrec.Name = "nudResPrec";
             this.nudResPrec.Size = new System.Drawing.Size(120, 20);
             this.nudResPrec.TabIndex = 9;
+            this.nudResPrec.ThousandsSeparator = true;
             this.nudResPrec.ValueChanged += new System.EventHandler(this.nudResPrec_ValueChanged);
             // 
             // nudResExis
             // 
             this.nudResExis.Location = new System.Drawing.Point(207, 207);
+            this.nudResExis.Maximum = new decimal(new int[] {
+            100000,
+            0,
+            0,
+            0});
             this.nudResExis.Name = "nudResExis";
             this.nudResExis.Size = new System.Drawing.Size(120, 20);
             this.nudResExis.TabIndex = 10;
-            // 
-            // lblResEst
-            // 
-            this.lblResEst.AutoSize = true;
-            this.lblResEst.Location = new System.Drawing.Point(207, 243);
-            this.lblResEst.Name = "lblResEst";
-            this.lblResEst.Size = new System.Drawing.Size(17, 13);
-            this.lblResEst.TabIndex = 11;
-            this.lblResEst.Text = "\"\"";
+            this.nudResExis.ThousandsSeparator = true;
             // 
             // btnActualizar
             // 
-            this.btnActualizar.Location = new System.Drawing.Point(188, 299);
+            this.btnActualizar.Location = new System.Drawing.Point(117, 295);
             this.btnActualizar.Name = "btnActualizar";
             this.btnActualizar.Size = new System.Drawing.Size(139, 23);
             this.btnActualizar.TabIndex = 12;
@@ -167,7 +165,7 @@
             // cmbResEst
             // 
             this.cmbResEst.FormattingEnabled = true;
-            this.cmbResEst.Location = new System.Drawing.Point(341, 243);
+            this.cmbResEst.Location = new System.Drawing.Point(207, 240);
             this.cmbResEst.Name = "cmbResEst";
             this.cmbResEst.Size = new System.Drawing.Size(121, 21);
             this.cmbResEst.TabIndex = 13;
@@ -176,10 +174,9 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(496, 361);
+            this.ClientSize = new System.Drawing.Size(386, 361);
             this.Controls.Add(this.cmbResEst);
             this.Controls.Add(this.btnActualizar);
-            this.Controls.Add(this.lblResEst);
             this.Controls.Add(this.nudResExis);
             this.Controls.Add(this.nudResPrec);
             this.Controls.Add(this.txtResDesc);
@@ -214,7 +211,6 @@
         private System.Windows.Forms.TextBox txtResDesc;
         private System.Windows.Forms.NumericUpDown nudResPrec;
         private System.Windows.Forms.NumericUpDown nudResExis;
-        private System.Windows.Forms.Label lblResEst;
         private System.Windows.Forms.Button btnActualizar;
         private System.Windows.Forms.ComboBox cmbResEst;
     }

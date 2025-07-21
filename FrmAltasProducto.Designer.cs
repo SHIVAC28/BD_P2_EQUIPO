@@ -38,7 +38,6 @@
             this.txtDescripcion = new System.Windows.Forms.TextBox();
             this.nudPre = new System.Windows.Forms.NumericUpDown();
             this.nudExis = new System.Windows.Forms.NumericUpDown();
-            this.btnlns = new System.Windows.Forms.Button();
             this.btnProc = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.nudPre)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.nudExis)).BeginInit();
@@ -96,6 +95,7 @@
             this.txtIDFab.Name = "txtIDFab";
             this.txtIDFab.Size = new System.Drawing.Size(100, 20);
             this.txtIDFab.TabIndex = 6;
+            this.txtIDFab.TextChanged += new System.EventHandler(this.txtIDFab_TextChanged);
             // 
             // txtIDProd
             // 
@@ -113,6 +113,7 @@
             // 
             // nudPre
             // 
+            this.nudPre.DecimalPlaces = 2;
             this.nudPre.Location = new System.Drawing.Point(145, 135);
             this.nudPre.Maximum = new decimal(new int[] {
             100000,
@@ -122,6 +123,7 @@
             this.nudPre.Name = "nudPre";
             this.nudPre.Size = new System.Drawing.Size(120, 20);
             this.nudPre.TabIndex = 9;
+            this.nudPre.ThousandsSeparator = true;
             // 
             // nudExis
             // 
@@ -134,24 +136,15 @@
             this.nudExis.Name = "nudExis";
             this.nudExis.Size = new System.Drawing.Size(120, 20);
             this.nudExis.TabIndex = 10;
-            // 
-            // btnlns
-            // 
-            this.btnlns.Location = new System.Drawing.Point(70, 241);
-            this.btnlns.Name = "btnlns";
-            this.btnlns.Size = new System.Drawing.Size(137, 23);
-            this.btnlns.TabIndex = 11;
-            this.btnlns.Text = "Insertar Regristro";
-            this.btnlns.UseVisualStyleBackColor = true;
-            this.btnlns.Click += new System.EventHandler(this.btnlns_Click);
+            this.nudExis.ThousandsSeparator = true;
             // 
             // btnProc
             // 
-            this.btnProc.Location = new System.Drawing.Point(264, 241);
+            this.btnProc.Location = new System.Drawing.Point(97, 245);
             this.btnProc.Name = "btnProc";
             this.btnProc.Size = new System.Drawing.Size(148, 23);
             this.btnProc.TabIndex = 12;
-            this.btnProc.Text = "Insertar Procedimiento";
+            this.btnProc.Text = "Insertar Producto";
             this.btnProc.UseVisualStyleBackColor = true;
             this.btnProc.Click += new System.EventHandler(this.btnProc_Click);
             // 
@@ -159,9 +152,8 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(467, 297);
+            this.ClientSize = new System.Drawing.Size(362, 293);
             this.Controls.Add(this.btnProc);
-            this.Controls.Add(this.btnlns);
             this.Controls.Add(this.nudExis);
             this.Controls.Add(this.nudPre);
             this.Controls.Add(this.txtDescripcion);
@@ -194,7 +186,6 @@
         private System.Windows.Forms.TextBox txtDescripcion;
         private System.Windows.Forms.NumericUpDown nudPre;
         private System.Windows.Forms.NumericUpDown nudExis;
-        private System.Windows.Forms.Button btnlns;
         private System.Windows.Forms.Button btnProc;
     }
 }

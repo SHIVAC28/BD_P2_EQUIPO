@@ -29,7 +29,7 @@ namespace Ventas_SHIVAC
             // "Data Source=nombre del servidor; Initial Catalog=Nombre de la base de datos;
             // User ID=Usuario que se conecta a la BD; Password=Clave del usuario;
             // Persist Security Info=True" indica que se requiere autenticación
-            conn.ConnectionString = "Data Source=localhost;Initial Catalog=MiEmpresaVentas1;Integrated Security=True";
+            conn.ConnectionString = "Data Source=localhost;Initial Catalog=MiEmpresaVentas;Integrated Security=True";
 
             // Si el estado de la conexión de SQL Server está cerrado, se abre
             if (conn.State == System.Data.ConnectionState.Closed)

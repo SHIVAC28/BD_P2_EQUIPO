@@ -16,7 +16,7 @@ namespace Ventas_SHIVAC
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new frmMenu());
+            Application.Run(new FrmIniciarSesion());
         }
     }
 }

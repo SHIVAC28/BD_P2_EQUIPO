@@ -46,18 +46,86 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AuditoriaManager.cs" />
     <Compile Include="BaseSQL.cs" />
+    <Compile Include="CifradorAES.cs" />
+    <Compile Include="FmrActualizarRepVentas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FmrActualizarRepVentas.Designer.cs">
+      <DependentUpon>FmrActualizarRepVentas.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmActualizarClientes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmActualizarClientes.Designer.cs">
+      <DependentUpon>FrmActualizarClientes.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmActualizarOficina.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmActualizarOficina.Designer.cs">
+      <DependentUpon>FrmActualizarOficina.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmActualizarPagos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmActualizarPagos.Designer.cs">
+      <DependentUpon>FrmActualizarPagos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmActualizarProveedores.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmActualizarProveedores.Designer.cs">
+      <DependentUpon>FrmActualizarProveedores.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmAltasProovedores.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmAltasProovedores.Designer.cs">
+      <DependentUpon>FrmAltasProovedores.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmAuditoria.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmAuditoria.Designer.cs">
+      <DependentUpon>FrmAuditoria.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmEliminarPedidos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmEliminarPedidos.Designer.cs">
+      <DependentUpon>FrmEliminarPedidos.cs</DependentUpon>
+    </Compile>
     <Compile Include="FrmActualizarProd.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="FrmActualizarProd.Designer.cs">
       <DependentUpon>FrmActualizarProd.cs</DependentUpon>
     </Compile>
-    <Compile Include="FrmActualizarProducto.cs">
+    <Compile Include="FrmAltaClientes.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FrmActualizarProducto.Designer.cs">
-      <DependentUpon>FrmActualizarProducto.cs</DependentUpon>
+    <Compile Include="FrmAltaClientes.Designer.cs">
+      <DependentUpon>FrmAltaClientes.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmAltasOficinas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmAltasOficinas.Designer.cs">
+      <DependentUpon>FrmAltasOficinas.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmAltasPagos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmAltasPagos.Designer.cs">
+      <DependentUpon>FrmAltasPagos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmAltasPedidos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmAltasPedidos.Designer.cs">
+      <DependentUpon>FrmAltasPedidos.cs</DependentUpon>
     </Compile>
     <Compile Include="FrmAltasProducto.cs">
       <SubType>Form</SubType>
@@ -65,11 +133,59 @@
     <Compile Include="FrmAltasProducto.Designer.cs">
       <DependentUpon>FrmAltasProducto.cs</DependentUpon>
     </Compile>
-    <Compile Include="FrmEliminarProd.cs">
+    <Compile Include="FrmAltasRepVentas.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FrmEliminarProd.Designer.cs">
-      <DependentUpon>FrmEliminarProd.cs</DependentUpon>
+    <Compile Include="FrmAltasRepVentas.Designer.cs">
+      <DependentUpon>FrmAltasRepVentas.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmEstadoClientes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmEstadoClientes.Designer.cs">
+      <DependentUpon>FrmEstadoClientes.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmEstadoOficinas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmEstadoOficinas.Designer.cs">
+      <DependentUpon>FrmEstadoOficinas.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmEstadoPagos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmEstadoPagos.Designer.cs">
+      <DependentUpon>FrmEstadoPagos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmEstadoProd.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmEstadoProd.Designer.cs">
+      <DependentUpon>FrmEstadoProd.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmEstadoProoveedor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmEstadoProoveedor.Designer.cs">
+      <DependentUpon>FrmEstadoProoveedor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmEstadoRepVentas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmEstadoRepVentas.Designer.cs">
+      <DependentUpon>FrmEstadoRepVentas.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmExportar.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmExportar.Designer.cs">
+      <DependentUpon>FrmExportar.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmIniciarSesion.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmIniciarSesion.Designer.cs">
+      <DependentUpon>FrmIniciarSesion.cs</DependentUpon>
     </Compile>
     <Compile Include="frmMenu.cs">
       <SubType>Form</SubType>
@@ -77,31 +193,106 @@
     <Compile Include="frmMenu.Designer.cs">
       <DependentUpon>frmMenu.cs</DependentUpon>
     </Compile>
+    <Compile Include="FrmPedidoDetalles.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmPedidoDetalles.Designer.cs">
+      <DependentUpon>FrmPedidoDetalles.cs</DependentUpon>
+    </Compile>
     <Compile Include="FrmQueryProductos.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="FrmQueryProductos.Designer.cs">
       <DependentUpon>FrmQueryProductos.cs</DependentUpon>
     </Compile>
+    <Compile Include="FrmRegistroUsuarios.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmRegistroUsuarios.Designer.cs">
+      <DependentUpon>FrmRegistroUsuarios.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="FmrActualizarRepVentas.resx">
+      <DependentUpon>FmrActualizarRepVentas.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmActualizarClientes.resx">
+      <DependentUpon>FrmActualizarClientes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmActualizarOficina.resx">
+      <DependentUpon>FrmActualizarOficina.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmActualizarPagos.resx">
+      <DependentUpon>FrmActualizarPagos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmActualizarProveedores.resx">
+      <DependentUpon>FrmActualizarProveedores.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmAltasProovedores.resx">
+      <DependentUpon>FrmAltasProovedores.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmAuditoria.resx">
+      <DependentUpon>FrmAuditoria.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmEliminarPedidos.resx">
+      <DependentUpon>FrmEliminarPedidos.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FrmActualizarProd.resx">
       <DependentUpon>FrmActualizarProd.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FrmActualizarProducto.resx">
-      <DependentUpon>FrmActualizarProducto.cs</DependentUpon>
+    <EmbeddedResource Include="FrmAltaClientes.resx">
+      <DependentUpon>FrmAltaClientes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmAltasOficinas.resx">
+      <DependentUpon>FrmAltasOficinas.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmAltasPagos.resx">
+      <DependentUpon>FrmAltasPagos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmAltasPedidos.resx">
+      <DependentUpon>FrmAltasPedidos.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FrmAltasProducto.resx">
       <DependentUpon>FrmAltasProducto.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FrmEliminarProd.resx">
-      <DependentUpon>FrmEliminarProd.cs</DependentUpon>
+    <EmbeddedResource Include="FrmAltasRepVentas.resx">
+      <DependentUpon>FrmAltasRepVentas.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmEstadoClientes.resx">
+      <DependentUpon>FrmEstadoClientes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmEstadoOficinas.resx">
+      <DependentUpon>FrmEstadoOficinas.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmEstadoPagos.resx">
+      <DependentUpon>FrmEstadoPagos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmEstadoProd.resx">
+      <DependentUpon>FrmEstadoProd.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmEstadoProoveedor.resx">
+      <DependentUpon>FrmEstadoProoveedor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmEstadoRepVentas.resx">
+      <DependentUpon>FrmEstadoRepVentas.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmExportar.resx">
+      <DependentUpon>FrmExportar.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmIniciarSesion.resx">
+      <DependentUpon>FrmIniciarSesion.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmMenu.resx">
       <DependentUpon>frmMenu.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="FrmPedidoDetalles.resx">
+      <DependentUpon>FrmPedidoDetalles.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FrmQueryProductos.resx">
       <DependentUpon>FrmQueryProductos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmRegistroUsuarios.resx">
+      <DependentUpon>FrmRegistroUsuarios.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

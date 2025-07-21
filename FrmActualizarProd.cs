@@ -26,8 +26,9 @@ namespace Ventas_SHIVAC
 
             try
             {
+
                 BaseSQL objeto = new BaseSQL();
-                CadenaSQL = "SELECT DISTINCT IdFab FROM SchVtas.Productos;";
+                CadenaSQL = "SELECT DISTINCT IdFab FROM SchVtas.Productos WHERE Activo = '1';";
                 this.cmbResIdFab.DataSource = objeto.LeerDatos(CadenaSQL);
                 cmbResIdFab.DisplayMember = "IdFab";
                 cmbResIdFab.ValueMember = "IdFab";
@@ -105,14 +106,16 @@ namespace Ventas_SHIVAC
                             txtResDesc.Text = dr["Descripcion"].ToString();
                             nudResExis.Value = (int)dr["Existencias"];
                             nudResPrec.Value = (decimal)dr["Precio"];
+
                             int ide = (int)dr["IDEdoProd"];
                             CadenaSQL2 = "SELECT Descripcion FROM SchVtas.EdosProductos where IDEdoProd = '" + ide + "'";
                             dr.Close();
+
                             SqlDataReader dr2 = objeto.ConsultaSQL(CadenaSQL2);
 
                             if (dr2.Read())
                             {
-                                lblResEst.Text = dr2["Descripcion"].ToString();
+                                cmbResEst.Text = dr2["Descripcion"].ToString();
                             }
 
 
@@ -132,19 +135,36 @@ namespace Ventas_SHIVAC
         {
             BaseSQL objeto = new BaseSQL();
            
-            String CadenaSQL = "EXEC SchVtas.ActualizarProdApp  '"+cmbResIdFab.SelectedValue+"', '"+cmbResIdProd.SelectedValue+"','"+txtResDesc.Text+"', '"+nudResPrec.Value+"', '"+nudResExis.Value+"', '"+cmbResEst.SelectedValue+"'";
+            String CadenaSQL = "EXEC SchVtas.ActualizarProductos '" + cmbResIdFab.SelectedValue+"', '"+cmbResIdProd.SelectedValue+"','"+txtResDesc.Text+"', '"+nudResPrec.Value+"', '"+nudResExis.Value+"', '"+cmbResEst.SelectedValue+"'";
             try
             {
                 objeto.Ejecutar(CadenaSQL);
                 MessageBox.Show("ACTUALIZADO CORRECTAMENTE");
-
-            }catch(Exception er)
+                /*txtResDesc.Text = "";
+                nudResPrec.Value = 0;
+                nudResExis.Value = 0;
+                cmbResEst.ValueMember = "Nuevo";*/
+               
+            }
+            catch(Exception er)
             {
                 MessageBox.Show(er.Message);
             }
+
+
         }
 
         private void nudResPrec_ValueChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void checkBox1_CheckedChanged(object sender, EventArgs e)
         {
 
         }

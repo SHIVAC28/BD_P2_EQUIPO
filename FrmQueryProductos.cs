@@ -41,7 +41,7 @@ namespace Ventas_SHIVAC
             if (rbtnListaProd.Checked)
             {
                 BaseSQL objeto = new BaseSQL();
-                string cadenaSQL = "SELECT IdFab,IdProd,Descripcion,Precio,Existencias FROM SchVtas.Productos";
+                string cadenaSQL = "SELECT IdFab,IdProd,Descripcion,Precio,Existencias,Activo FROM SchVtas.Productos";
                 objeto.llenargrid(cadenaSQL, dataGridView1);
                 
                 rbtnListaProd.Checked = false;

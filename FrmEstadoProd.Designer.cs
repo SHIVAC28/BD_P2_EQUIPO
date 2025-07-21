@@ -1,6 +1,6 @@
 ﻿namespace Ventas_SHIVAC
 {
-    partial class FrmEliminarProd
+    partial class FrmEstadoProd
     {
         /// <summary>
         /// Required designer variable.
@@ -41,12 +41,14 @@
             this.lblDes = new System.Windows.Forms.Label();
             this.lblIdProd = new System.Windows.Forms.Label();
             this.lblIdFab = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
+            this.CBActivo = new System.Windows.Forms.CheckBox();
             this.SuspendLayout();
             // 
             // lblResEst
             // 
             this.lblResEst.AutoSize = true;
-            this.lblResEst.Location = new System.Drawing.Point(179, 197);
+            this.lblResEst.Location = new System.Drawing.Point(179, 190);
             this.lblResEst.Name = "lblResEst";
             this.lblResEst.Size = new System.Drawing.Size(17, 13);
             this.lblResEst.TabIndex = 28;
@@ -54,18 +56,18 @@
             // 
             // btnDesc
             // 
-            this.btnDesc.Location = new System.Drawing.Point(136, 241);
+            this.btnDesc.Location = new System.Drawing.Point(110, 265);
             this.btnDesc.Name = "btnDesc";
-            this.btnDesc.Size = new System.Drawing.Size(141, 23);
+            this.btnDesc.Size = new System.Drawing.Size(154, 23);
             this.btnDesc.TabIndex = 26;
-            this.btnDesc.Text = "ELIMINAR PRODUCTO";
+            this.btnDesc.Text = "GUARDAR";
             this.btnDesc.UseVisualStyleBackColor = true;
             this.btnDesc.Click += new System.EventHandler(this.btnDesc_Click);
             // 
             // lblResExis
             // 
             this.lblResExis.AutoSize = true;
-            this.lblResExis.Location = new System.Drawing.Point(179, 160);
+            this.lblResExis.Location = new System.Drawing.Point(179, 159);
             this.lblResExis.Name = "lblResExis";
             this.lblResExis.Size = new System.Drawing.Size(17, 13);
             this.lblResExis.TabIndex = 25;
@@ -161,11 +163,32 @@
             this.lblIdFab.TabIndex = 15;
             this.lblIdFab.Text = "Clave del Frabricante:";
             // 
-            // FrmEliminarProd
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(62, 218);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(40, 13);
+            this.label1.TabIndex = 29;
+            this.label1.Text = "Activo:";
+            // 
+            // CBActivo
+            // 
+            this.CBActivo.AutoSize = true;
+            this.CBActivo.Location = new System.Drawing.Point(182, 214);
+            this.CBActivo.Name = "CBActivo";
+            this.CBActivo.Size = new System.Drawing.Size(15, 14);
+            this.CBActivo.TabIndex = 30;
+            this.CBActivo.UseVisualStyleBackColor = true;
+            this.CBActivo.CheckedChanged += new System.EventHandler(this.CBActivo_CheckedChanged);
+            // 
+            // FrmEstadoProd
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(466, 331);
+            this.ClientSize = new System.Drawing.Size(372, 331);
+            this.Controls.Add(this.CBActivo);
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.lblResEst);
             this.Controls.Add(this.btnDesc);
             this.Controls.Add(this.lblResExis);
@@ -179,8 +202,8 @@
             this.Controls.Add(this.lblDes);
             this.Controls.Add(this.lblIdProd);
             this.Controls.Add(this.lblIdFab);
-            this.Name = "FrmEliminarProd";
-            this.Text = "FrmEliminarProd";
+            this.Name = "FrmEstadoProd";
+            this.Text = "FrmEstadoProd";
             this.Load += new System.EventHandler(this.FrmEliminarProd_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -202,5 +225,7 @@
         private System.Windows.Forms.Label lblDes;
         private System.Windows.Forms.Label lblIdProd;
         private System.Windows.Forms.Label lblIdFab;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.CheckBox CBActivo;
     }
 }
